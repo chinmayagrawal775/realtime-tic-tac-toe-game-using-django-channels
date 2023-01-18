@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block custom-css %}<link rel="stylesheet" href="{% static 'game/css/style.css' %}">{% endblock custom-css %}
+{% block title %}Playing - Tic Tac Toe{% endblock title %}
+{% block maincontent %}
+    <div class="container mt-5">
+        <h2 class="text-center alert alert-info mb-5 border border-4 rounded-5 border-success p-10">Play Game Here</h2>
+        <div class="my-auto">
+            <div class="d-flex justify-content-center">
+                <div id="1" onclick="func(1)" class="matrix-box border-bottom border-end border-4 border-dark text-center align-middle fs-1 fw-bold p-3"></div>
+                <div id="2" onclick="func(2)" class="matrix-box border-bottom border-end border-4 border-dark text-center align-middle fs-1 fw-bold p-3"></div>
+                <div id="3" onclick="func(3)" class="matrix-box border-bottom border-4 border-dark text-center align-middle fs-1 fw-bold p-3"></div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+                <div id="4" onclick="func(4)" class="matrix-box border-bottom border-end border-4 border-dark text-center align-middle fs-1 fw-bold p-3"></div>
+                <div id="5" onclick="func(5)" class="matrix-box border-bottom border-end border-4 border-dark text-center align-middle fs-1 fw-bold p-3"></div>
+                <div id="6" onclick="func(6)" class="matrix-box border-bottom border-4 border-dark text-center align-middle fs-1 fw-bold p-3"></div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+                <div id="7" onclick="func(7)" class="matrix-box border-end border-4 border-dark text-center align-middle fs-1 fw-bold p-3"></div>
+                <div id="8" onclick="func(8)" class="matrix-box border-end border-4 border-dark text-center align-middle fs-1 fw-bold p-3"></div>
+                <div id="9" onclick="func(9)" class="matrix-box text-center align-middle fs-1 fw-bold p-3"></div>
+            </div>
+        </div>    
+    </div>
+
+    <button id="result" type="button" class="btn btn-primary btn-sm invisible" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Game Results...!!!</h1>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" href='/'>Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{player_name | json_script:"player-name"}}
+    {{game_code | json_script:"game-code"}}
+    {{i_have_game_code | json_script:"i-have-game-code"}}
+    {{game_matrix_id | json_script:"game-matrix-id"}}
+    
+{% endblock maincontent%}
+
+{% block websocket-script %}
+    <script src="{% static 'game/js/script.js' %}"></script>
+{% endblock websocket-script %}

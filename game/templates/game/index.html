@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% block title %}Tic Tac Toe{% endblock title %}
+{% block maincontent %}
+    <div class="container mt-3">
+        <h2 class="text-center alert alert-success border border-4 rounded-5 border-success p-10">EverGreen Game - Tic Tac Toe</h2>
+        <div class="row">
+            <div class="col-sm-5 border border-2 rounded-5 border-primary p-4">
+                <h3 class="text-center alert alert-info">Start From Here</h3>
+                <form action="/game/" method="POST">
+                    {% csrf_token %}
+                    {{player_form.as_p}}
+                    <h5 class="text-center alert alert-info">Share this code with Your Friend to start. <br>Or Enter the code if you Already have.</h5>
+                    <input type="submit" class="btn btn-success" value="Start Game">
+                </form>
+            </div>
+            <div class="col-sm-6 offset-1 border border-2 rounded-5 border-primary p-5">
+                <h3 class="text-center alert alert-warning">Instructions For Game</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">🧿 Enter Your Username, Which will be Displayed to Other.</li>
+                    <li class="list-group-item">🧿 Share the Default Code with your friend to start the game with your friend.</li>
+                    <li class="list-group-item">🧿 You can also enter the code which is shared by your friend to play with him.</li>
+                    <li class="list-group-item">🧿 Click on Start Game Button to Start the Game.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock maincontent%}
