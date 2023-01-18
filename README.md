@@ -10,7 +10,7 @@ This Real-Time TIC TAC TOE Game Built Using Django, where two players can compet
 ## Project Functionalities ⚙
   - No Login/Signup required.
   - Enter Your Name and start playing.
-  - Share the Game Code with your freind to start playing with him.
+  - Share the Game Code with your friend to start playing with him.
 
 ## Technologies Used 👨‍💻
 - `Django` - For Coding Backend of Application.
@@ -25,13 +25,13 @@ This Real-Time TIC TAC TOE Game Built Using Django, where two players can compet
 ## User Interface
 User Can Interact with the Application Using the web interface or the frontend of the application.
 
-Where he can enter his name and start playing with his freind after sharing the game code.
+Where he can enter his name and start playing with his friend after sharing the game code.
 
 The other opponent can enter his name and the provided code and start playing the game.
 
 ## Demo Of Application
 To Watch the Live Demo Of Application click on the Below Given Link of Twitter Post.
-[View Demo](https://github.com/chinmayagrawal775/realtime-tic-tac-toe-game-using-django-channels) 🚀.
+[View Demo](https://twitter.com/Chinmay_775/status/1615691865596231685) 🚀.
 
 ### Here Are Some ScreenShots of The Application
 
@@ -44,7 +44,7 @@ To Watch the Live Demo Of Application click on the Below Given Link of Twitter P
 <img src="https://user-images.githubusercontent.com/62383314/213157259-1a550a0a-6976-4b66-9f7d-a62958744304.png" alt="drawing" width="49%"></img>
 
 ## Note
-If You are Learner, or Want to test this application.  Then After Forking & Cloning, You Can use these `Test Credentials` for accessing the Admin Panel of Application to see how it stores `Game Details` on temporary basis.
+If You are Learner, or Want to test this application, Then After Forking & Cloning, You Can use these `Test Credentials` for accessing the Admin Panel of Application to see how it stores `Game Details` on temporary basis.
 
 ``` PYTHON
 - #### FOR ADMIN:
