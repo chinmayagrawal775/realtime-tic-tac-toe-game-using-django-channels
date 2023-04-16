@@ -15,6 +15,7 @@ This Real-Time TIC TAC TOE Game Built Using Django, where two players can compet
 ## Technologies Used 👨‍💻
 - `Django` - For Coding Backend of Application.
 - `Django-Channels` - For using `WebScokets` during game to esablish real-time Communication.
+- `Memurai/Redis` - For Adding a Django Channel Layer in Backend.
 - `SQLite` - Used this Default DataBase for Storing Data on temporary basis.
 - `DTL` - Django Template Language for Building Dynamic Pages.
 - `JavaScript` - For Integrating Additional functionalities in Project.
