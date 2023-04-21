@@ -31,8 +31,8 @@ Where he can enter his name and start playing with his friend after sharing the 
 The other opponent can enter his name and the provided code and start playing the game.
 
 ## Demo Of Application
-To Watch the Live Demo Of Application click on the Below Given Link of Twitter Post.
-[View Demo](https://twitter.com/Chinmay_775/status/1615691865596231685) 🚀.
+To Watch the Live Demo Of Application click on the Below Given Link.
+[View Demo](https://www.linkedin.com/posts/chinmayagrawal775_python-django-djangodeveloper-activity-7054068478915264512-tcVV/) 🚀.
 
 ### Here Are Some ScreenShots of The Application
 
