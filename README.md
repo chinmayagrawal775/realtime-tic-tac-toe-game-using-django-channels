@@ -5,7 +5,7 @@
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 ## About Project 📄
-This Real-Time TIC TAC TOE Game Built Using Django, where two players can competete each other in a match.
+This Real-Time TIC TAC TOE Game Built Using Django, where two players can compete each other in a match.
 
 ## Project Functionalities ⚙
   - No Login/Signup required.
@@ -14,7 +14,7 @@ This Real-Time TIC TAC TOE Game Built Using Django, where two players can compet
 
 ## Technologies Used 👨‍💻
 - `Django` - For Coding Backend of Application.
-- `Django-Channels` - For using `WebScokets` during game to esablish real-time Communication.
+- `Django-Channels` - For using `WebScokets` during game to establish real-time Communication.
 - `Memurai/Redis` - For Adding a Django Channel Layer in Backend.
 - `SQLite` - Used this Default DataBase for Storing Data on temporary basis.
 - `DTL` - Django Template Language for Building Dynamic Pages.
