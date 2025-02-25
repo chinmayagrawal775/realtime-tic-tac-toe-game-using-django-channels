@@ -22,6 +22,8 @@ COPY . /app/
 
 # Run collectstatic to collect all static files into the STATIC_ROOT
 RUN python manage.py collectstatic --noinput
+RUN python manage.py makemigrations
+RUN python manage.py migrate
 
 # Set the default port to 8000
 ENV PORT=8000
