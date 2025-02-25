@@ -3,7 +3,7 @@ const playerName = JSON.parse(document.getElementById('player-name').textContent
 const iHaveGameCode = JSON.parse(document.getElementById('i-have-game-code').textContent)
 const gameMatrixId = JSON.parse(document.getElementById('game-matrix-id').textContent)
 
-var ws = new WebSocket('ws://127.0.0.1:8000/ws/asc/pg/' + gameCode + '/' + gameMatrixId + '/' + playerName + '/' + iHaveGameCode + '/')
+var ws = new WebSocket('wss://realtime-tic-tac-toe-game-using-production.up.railway.app/ws/asc/pg/' + gameCode + '/' + gameMatrixId + '/' + playerName + '/' + iHaveGameCode + '/')
 
 let playerSymbol = 'X'
 if (iHaveGameCode == 'on') {
