@@ -26,5 +26,7 @@ ENV PORT=8000
 EXPOSE 8000
 
 # Set the entry point to run Gunicorn with Django's wsgi.py
-CMD ["gunicorn", "tic_tac_toe.wsgi:application", "--bind", "0.0.0.0:$PORT"]
+# CMD ["gunicorn", "tic_tac_toe.wsgi:application", "--bind", "0.0.0.0:$PORT"]
+
+CMD gunicorn tic_tac_toe.wsgi:application --bind 0.0.0.0:$PORT
 
