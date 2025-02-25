@@ -36,6 +36,8 @@ def update_matrix(matrix_id, box_id, player_type):
 @database_sync_to_async
 def check_winner(matrix_id):
 
+    from .models import GameMatrix
+
     base_map = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     gm_map = GameMatrix.objects.get(id=matrix_id).get_map()
     
