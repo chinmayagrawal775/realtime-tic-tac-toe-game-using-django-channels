@@ -41,4 +41,5 @@ EXPOSE 8000
 # CMD daphne tic_tac_toe.asgi:application --bind 0.0.0.0:$PORT
 # CMD ["daphne", "tic_tac_toe.asgi:application", "--bind", "0.0.0.0:$PORT"]
 # CMD ["sh", "-c", "daphne tic_tac_toe.asgi:application --bind 0.0.0.0:$PORT"]
-CMD sh -c "daphne tic_tac_toe.asgi:application --bind 0.0.0.0:$PORT"
+# CMD sh -c "daphne tic_tac_toe.asgi:application --bind 0.0.0.0:$PORT"
+CMD ["daphne", "tic_tac_toe.asgi:application", "--bind", "0.0.0.0"]
