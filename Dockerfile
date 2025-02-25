@@ -14,5 +14,11 @@ RUN pip install -r requirements.txt
 COPY . /app/
 
 # Command to run the app
-CMD ["python", "manage.py", "runserver"]
+# CMD ["python", "manage.py", "runserver"]
+
+# Expose the port that the app will run on
+EXPOSE 8000
+
+# Set the entry point to run Gunicorn with Django's wsgi.py
+CMD ["gunicorn", "tic_tac_toe.wsgi:application", "--bind", "0.0.0.0:$PORT"]
 
