@@ -10,6 +10,9 @@ WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
+# Install gunicorn directly in the Dockerfile
+RUN pip install gunicorn
+
 # Copy the rest of your app files
 COPY . /app/
 
