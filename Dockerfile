@@ -19,6 +19,9 @@ COPY . /app/
 # Command to run the app
 # CMD ["python", "manage.py", "runserver"]
 
+# Set the default port to 8000
+ENV PORT=8000
+
 # Expose the port that the app will run on
 EXPOSE 8000
 
