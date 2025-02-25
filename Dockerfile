@@ -26,6 +26,9 @@ RUN python manage.py collectstatic --noinput
 # Set the default port to 8000
 ENV PORT=8000
 
+# Define the DJANGO_SETTINGS_MODULE environment variable
+ENV DJANGO_SETTINGS_MODULE=tic_tac_toe.settings
+
 # Expose the port that the app will run on
 EXPOSE 8000
 
