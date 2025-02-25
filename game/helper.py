@@ -1,9 +1,10 @@
-from .models import Game, GameMatrix
 from channels.db import database_sync_to_async
 import json
 
 @database_sync_to_async
 def setup_game(game_code, game_matrix_id, player_name, player_type):
+
+    from .models import Game, GameMatrix
 
     game_matrix =GameMatrix.objects.get(id=game_matrix_id)    
 
@@ -18,6 +19,8 @@ def setup_game(game_code, game_matrix_id, player_name, player_type):
 
 @database_sync_to_async
 def update_matrix(matrix_id, box_id, player_type):
+
+    from .models import GameMatrix
 
     game_matrix_map = GameMatrix.objects.get(id=matrix_id).get_map()
     box_id = int(box_id) - 1
