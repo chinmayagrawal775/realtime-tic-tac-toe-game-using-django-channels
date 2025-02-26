@@ -1,5 +1,4 @@
 from channels.consumer import AsyncConsumer
-from .models import Game, GameMatrix
 from channels.db import database_sync_to_async
 from .helper import *
 from channels.exceptions import StopConsumer
@@ -7,6 +6,7 @@ import json
 
 class GameConsumer(AsyncConsumer):
     async def websocket_connect(self, event):
+        from .models import Game
 
         self.game_code = self.scope['url_route']['kwargs']['game_code']
         self.game_matrix_id = self.scope['url_route']['kwargs']['game_matrix_id']
@@ -59,6 +59,7 @@ class GameConsumer(AsyncConsumer):
         })
 
     async def websocket_disconnect(self, event):
+        from .models import GameMatrix
         
         game_matrix = await database_sync_to_async(GameMatrix.objects.get)(id=self.game_matrix_id)
         await database_sync_to_async(game_matrix.delete)()

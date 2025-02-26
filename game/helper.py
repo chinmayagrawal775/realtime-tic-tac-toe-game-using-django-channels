@@ -1,9 +1,10 @@
-from .models import Game, GameMatrix
 from channels.db import database_sync_to_async
 import json
 
 @database_sync_to_async
 def setup_game(game_code, game_matrix_id, player_name, player_type):
+
+    from .models import Game, GameMatrix
 
     game_matrix =GameMatrix.objects.get(id=game_matrix_id)    
 
@@ -19,6 +20,8 @@ def setup_game(game_code, game_matrix_id, player_name, player_type):
 @database_sync_to_async
 def update_matrix(matrix_id, box_id, player_type):
 
+    from .models import GameMatrix
+
     game_matrix_map = GameMatrix.objects.get(id=matrix_id).get_map()
     box_id = int(box_id) - 1
 
@@ -32,6 +35,8 @@ def update_matrix(matrix_id, box_id, player_type):
 
 @database_sync_to_async
 def check_winner(matrix_id):
+
+    from .models import GameMatrix
 
     base_map = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     gm_map = GameMatrix.objects.get(id=matrix_id).get_map()
